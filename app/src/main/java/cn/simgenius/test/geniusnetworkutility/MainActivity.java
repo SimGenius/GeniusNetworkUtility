@@ -24,31 +24,7 @@ public class MainActivity extends Activity {
 
         final TextView textView = (TextView) findViewById(R.id.txt);
 
-//        new JSONGet().executeTask("http://simgenius.cn/blog2/content?target=info&id=9",
-//                new JSONGet.OnTaskFinishListener() {
-//                    @Override
-//                    public void onTaskFinish(JSONObject jsonObject) {
-//                        textView.setText(jsonObject.toString());
-//                    }
-//                });
-//
-//        new JSONArrayGet("http://simgenius.cn/blog2/content?target=content&id=9", new JSONArrayGet.OnTaskFinishListener() {
-//            @Override
-//            public void onTaskFinish(JSONArray result) {
-//                textView.setText(result.toString());
-//            }
-//        });
-//        Map<String,String> map = new HashMap<>();
-//        map.put("target","content");
-//        map.put("id","9");
-        new JSONArrayPost("http://simgenius.cn/blog2/content", map, new JSONArrayPost.OnTaskFinishListener() {
-            @Override
-            public void onTaskFinish(JSONArray result) {
-                textView.setText(result.toString());
-            }
-        });
-
-        new StringGet("http://simgenius.cn/", new StringGet.OnTaskFinishListener() {
+        new StringGet("http://baidu.com", new StringGet.OnTaskFinishListener() {
             @Override
             public void onTaskFinish(String result) {
                 textView.setText(result.toString());
